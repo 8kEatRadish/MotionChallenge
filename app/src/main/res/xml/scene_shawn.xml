@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <Transition
+        app:constraintSetEnd="@+id/end"
+        app:constraintSetStart="@+id/start"
+        app:duration="1000"
+        app:motionInterpolator="linear">
+
+        <OnSwipe
+            app:dragDirection="dragUp"
+            app:touchAnchorSide="top"
+            app:touchRegionId="@id/box" />
+        <KeyFrameSet>
+            <KeyAttribute
+                android:rotation="-25"
+                app:framePosition="50"
+                app:motionTarget="@+id/card" />
+        </KeyFrameSet>
+
+        <KeyFrameSet>
+            <KeyAttribute
+                android:translationY="-50dp"
+                app:framePosition="50"
+                app:motionTarget="@+id/card" />
+        </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/card"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="68dp"
+            android:translationZ="21dp"
+            app:layout_constraintBottom_toBottomOf="@+id/box"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:id="@+id/box"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:translationZ="22dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/box"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:translationZ="21dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/card"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="68dp"
+            android:translationZ="22dp"
+            app:layout_constraintBottom_toBottomOf="@+id/box"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent" />
+    </ConstraintSet>
+</MotionScene>

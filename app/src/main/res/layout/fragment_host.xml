@@ -5,6 +5,17 @@
     android:layout_height="match_parent">
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/shawn_demo"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="@string/hint0"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@id/jetpack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/jetpack"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -13,7 +24,7 @@
         app:layout_constraintBottom_toTopOf="@id/dragonBall"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/shawn_demo" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/dragonBall"

@@ -2,4 +2,5 @@
     <string name="app_name">MotionLayoutDemo</string>
     <string name="hint1">Jetpack from Java to Kotlin</string>
     <string name="hint2">不要跟孙家人对波</string>
+    <string name="hint0">Shawn的MotionDemo</string>
 </resources>

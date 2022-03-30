@@ -14,6 +14,10 @@ import kotlinx.android.synthetic.main.fragment_host.*
  */
 class HostFragment : Fragment(R.layout.fragment_host) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        shawn_demo.setOnClickListener {
+            replaceFragment(MotionShawnFragment())
+        }
+
         jetpack.setOnClickListener {
             replaceFragment(MotionJetpackFragment())
         }
